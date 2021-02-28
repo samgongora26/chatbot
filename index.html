@@ -96,56 +96,38 @@
 						</div>
 						<!----------------------MENSAJES-------------------->
 						<div class="card-body msg_card_body">
-							<!--tarantulino-->
-							<div class="d-flex justify-content-start mb-4">
-								<div class="img_cont_msg">
-									<img src="img/tarantulino.jpg" class="rounded-circle user_img_msg">
-								</div>
-								<div class="msg_cotainer">
-									hola, soy tarantulino, puedes preguntarme acerca de alguna frase de peliculas
-									<span class="msg_time">8:40 AM, Today</span>
-								</div>
-							</div>
-							<!--io-->
-							<div class="d-flex justify-content-end mb-4">
-								<div class="msg_cotainer_send">
-									Hola tarantulino
-									<span class="msg_time_send">8:55 AM, Today</span>
-								</div>
-								<div class="img_cont_msg">
-									<img src="img/d3.jpg" class="rounded-circle user_img_msg">
-								</div>
-							</div>
-							
+							<form class="form">
 								<!--tarantulino-->
-								<!--div class="d-flex justify-content-start mb-4">
+								<div class="d-flex justify-content-start mb-4">
 									<div class="img_cont_msg">
 										<img src="img/tarantulino.jpg" class="rounded-circle user_img_msg">
 									</div>
 									<div class="msg_cotainer">
-										Hi, how are you samim?
+										hola, soy tarantulino, puedes preguntarme acerca de alguna frase de peliculas
 										<span class="msg_time">8:40 AM, Today</span>
 									</div>
-								</div-->
+								</div>
 								<!--io-->
-								<!--div class="d-flex justify-content-end mb-4">
+								<div class="d-flex justify-content-end mb-4">
 									<div class="msg_cotainer_send">
-										Hi Khalid i am good tnx how about you?
+										Hola tarantulino
 										<span class="msg_time_send">8:55 AM, Today</span>
 									</div>
 									<div class="img_cont_msg">
 										<img src="img/d3.jpg" class="rounded-circle user_img_msg">
 									</div>
-								</div-->
+								</div>
+							</form>
+							
 						</div>
 						<div class="card-footer">
 							<div class="input-group">
 								<div class="input-group-append">
 									<span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
 								</div>
-								<textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+								<textarea name="" id="data" class="form-control type_msg" placeholder="Type your message..."></textarea>
 								<div class="input-group-append">
-									<span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+									<span id="send-btn" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
 								</div>
 							</div>
 						</div>
@@ -158,10 +140,11 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-$('#action_menu_btn').click(function(){
+	$('#action_menu_btn').click(function(){
 	$('.action_menu').toggle();
-});
+	});
 	});
 </script>
+<script src="js/app.js"></script>
 </body>
 </html>
