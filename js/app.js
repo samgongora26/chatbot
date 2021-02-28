@@ -7,17 +7,18 @@
                 $("#data").val('');
                 
                 // start ajax code
-                /*$.ajax({
-                    url: 'message.php',
+                $.ajax({
+                    url: 'php/app.php',
                     type: 'POST',
                     data: 'text='+$value,
                     success: function(result){
-                        $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>'+ result +'</p></div></div>';
+                        $replay = '<div class="d-flex justify-content-start mb-4"> <div class="img_cont_msg"> <img src="img/tarantulino.jpg" class="rounded-circle user_img_msg"> </div> <div class="msg_cotainer">' + result +  '<span class="msg_time">8:40 AM, Today</span> </div> </div>'
+                        //$replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>'+ result +'</p></div></div>';
                         $(".form").append($replay);
                         // when chat goes down the scroll bar automatically comes to the bottom
                         $(".form").scrollTop($(".form")[0].scrollHeight);
                     }
-                });*/
+                });
             });
             $(window).on('keydown', function(e) {
                 if (e.which == 13) {
@@ -26,6 +27,21 @@
                     //$msg = '<div class="user-inbox inbox"><div class="msg-header"><p>'+ $value +'</p></div></div>';
                     $(".form").append($msg);
                     $("#data").val('');
+                    // start ajax code
+                    $.ajax({
+                        url: 'php/app.php',
+                        type: 'POST',
+                        data: 'text='+$value,
+                        success: function(result){
+                            $replay = '<div class="d-flex justify-content-start mb-4"> <div class="img_cont_msg"> <img src="img/tarantulino.jpg" class="rounded-circle user_img_msg"> </div> <div class="msg_cotainer">' + result +  '<span class="msg_time">8:40 AM, Today</span> </div> </div>'
+                            //$replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>'+ result +'</p></div></div>';
+                            $(".form").append($replay);
+                            // when chat goes down the scroll bar automatically comes to the bottom
+                            $(".form").scrollTop($(".form")[0].scrollHeight);
+                        }
+                    });
+                    
+
                   return false;
                 }
               })
